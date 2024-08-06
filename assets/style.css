@@ -15,28 +15,6 @@
 }
 
 
-/* Custom Colors */
-:root {
-    --orange-darkest: #ff7a00;
-    --orange-dark: #ff8c00;
-    --orange-light: #ffaf40;
-    --orange-lighter: #ffcc80;
-}
-
-/* Extend Tailwind CSS */
-.text-orange-darkest {
-    color: var(--orange-darkest);
-}
-.bg-orange-darkest {
-    background-color: var(--orange-darkest);
-}
-.border-orange-darkest {
-    border-color: var(--orange-darkest);
-}
-.hover\:text-orange-darkest:hover {
-    color: var(--orange-darkest);
-}
-
 /* Font Family */
 .font-ubuntu {
     font-family: 'Ubuntu', sans-serif;
@@ -76,4 +54,87 @@
 
 .dark .text-gray-400 {
     color: #cbd5e0;
+}
+
+
+/* assets/style.css */
+:root {
+    --color-primary: #005c9d; /* Dark blue */
+    --color-secondary: #0980d3; /* Light blue */
+    --color-accent: #ffffff; /* White */
+    --color-text: #97a1aa; /* Light gray */
+    --color-background: #1f2937; /* Dark background */
+    --color-muted: #5e6870; /* Muted gray */
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+h1, .h1 {
+    font-size: 2.25rem; /* 36px */
+    color: var(--color-primary);
+}
+
+h2, .h2 {
+    font-size: 1.875rem; /* 30px */
+    color: var(--color-secondary);
+}
+
+h3, .h3 {
+    font-size: 1.5rem; /* 24px */
+    color: var(--color-accent);
+}
+
+p, .p {
+    font-size: 1rem; /* 16px */
+    color: var(--color-text);
+}
+
+.text-muted {
+    color: var(--color-muted);
+}
+
+.bg-primary {
+    background-color: var(--color-primary);
+}
+
+.bg-secondary {
+    background-color: var(--color-secondary);
+}
+
+.bg-accent {
+    background-color: var(--color-accent);
+}
+
+.text-primary {
+    color: var(--color-primary);
+}
+
+.text-secondary {
+    color: var(--color-secondary);
+}
+
+.text-accent {
+    color: var(--color-accent);
+}
+
+.project-card {
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+.project-card h3 {
+    color: var(--color-accent);
+}
+
+.project-card a {
+    color: var(--color-secondary);
+    transition: color 0.3s;
+}
+
+.project-card a:hover {
+    color: var(--color-primary);
 }
