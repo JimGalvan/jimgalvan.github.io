@@ -1,7 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mustache.js Example</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/4.2.0/mustache.min.js"></script>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+  <script id="template" type="x-tmpl-mustache">
+    <h1>{{title}}</h1>
+    <p>{{message}}</p>
+  </script>
+
+  <div id="target"></div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const template = document.getElementById('template').innerHTML;
+      const data = {
+        title: "Hello, Mustache!",
+        message: "This is a message rendered with Mustache.js"
+      };
+      const rendered = Mustache.render(template, data);
+      document.getElementById('target').innerHTML = rendered;
+    });
+  </script>
 </body>
 </html>
