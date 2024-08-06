@@ -1,25 +1,28 @@
-body {
-    font-family: Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+/* Custom Colors */
+:root {
+    --orange-darkest: #ff7a00;
+    --orange-dark: #ff8c00;
+    --orange-light: #ffaf40;
+    --orange-lighter: #ffcc80;
 }
 
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
+/* Extend Tailwind CSS */
+.text-orange-darkest {
+    color: var(--orange-darkest);
+}
+.bg-orange-darkest {
+    background-color: var(--orange-darkest);
+}
+.border-orange-darkest {
+    border-color: var(--orange-darkest);
+}
+.hover\:text-orange-darkest:hover {
+    color: var(--orange-darkest);
 }
 
-input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-button {
-    padding: 10px;
-    margin-right: 5px;
-}
-
-.done {
-    text-decoration: line-through;
-    color: grey;
+/* Font Family */
+.font-ubuntu {
+    font-family: 'Ubuntu', sans-serif;
 }
