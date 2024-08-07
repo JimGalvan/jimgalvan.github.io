@@ -222,3 +222,7 @@ p, .p {
 .bg-primary-dark:hover {
     background-color: #0056b3; /* Adjust this color to your preference */
 }
+
+.blue-gray-darkest {
+    border-color: #005c9d; /* Dark Blue for border */
+}
