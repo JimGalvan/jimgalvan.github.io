@@ -61,7 +61,7 @@
     <!-- Header -->
     <header class="flex justify-between items-center p-4 bg-gray-900 shadow-md rounded-lg">
         <div class="w-2/3">
-            <h1 class="text-5xl font-bold text-primary">Jim's Portfolio</h1>
+            <h1 class="text-5xl font-bold text-primary">Jim Galvan</h1>
             <div id="typed-container">
                 <span id="typed-text"></span>
             </div>
@@ -75,14 +75,23 @@
     </header>
 
     <!-- Menu -->
-    <nav class="bg-gray-800 p-4" x-data="{ open: false }">
-        <button @click="open = !open" class="text-white focus:outline-none">Menu</button>
-        <ul x-show="open" class="mt-2 space-y-2">
-            <li><a href="#about" class="hover:text-gray-400">About</a></li>
-            <li><a href="#projects" class="hover:text-gray-400">Projects</a></li>
-            <li><a href="#contact" class="hover:text-gray-400">Contact</a></li>
-        </ul>
+    <nav class="bg-gray-800 p-4 relative" x-data="{ open: false }" @click.away="open = false">
+        <div class="flex justify-between items-center">
+            <span class="text-white text-lg font-bold">My Portfolio</span>
+            <button @click="open = !open" class="text-white focus:outline-none sm:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+            <ul :class="{'block': open, 'hidden': !open}" class="absolute sm:relative top-full right-0 sm:top-auto sm:right-auto z-50 bg-gray-800 border border-gray-700 rounded-md mt-2 p-4 pr-6 space-y-2 sm:flex sm:space-x-4 sm:space-y-0 sm:mt-0 sm:border-none sm:p-0 sm:bg-transparent sm:rounded-none">
+                <li><a href="#about" @click="open = false" class="text-white hover:text-gray-400 block sm:inline-block">About</a></li>
+                <li><a href="#projects" @click="open = false" class="text-white hover:text-gray-400 block sm:inline-block">Projects</a></li>
+                <li><a href="#contact" @click="open = false" class="text-white hover:text-gray-400 block sm:inline-block">Contact</a></li>
+            </ul>
+        </div>
     </nav>
+    
+    
 
     <!-- Body -->
     <main class="container mx-auto px-4 sm:px-6 md:px-10 lg:px-20 py-10">
