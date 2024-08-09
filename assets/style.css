@@ -2,12 +2,18 @@
 
 /* Root Variables */
 :root {
-    --color-primary: #005c9d; /* Dark blue */
-    --color-secondary: #0980d3; /* Light blue */
-    --color-accent: #ffffff; /* White */
-    --color-text: #97a1aa; /* Light gray */
-    --color-background: #1f2937; /* Dark background */
-    --color-muted: #5e6870; /* Muted gray */
+    --color-primary: #005c9d;
+    /* Dark blue */
+    --color-secondary: #0980d3;
+    /* Light blue */
+    --color-accent: #ffffff;
+    /* White */
+    --color-text: #97a1aa;
+    /* Light gray */
+    --color-background: #1f2937;
+    /* Dark background */
+    --color-muted: #5e6870;
+    /* Muted gray */
 }
 
 /* General Body Styles */
@@ -18,23 +24,31 @@ body {
 }
 
 /* Typography */
-h1, .h1 {
-    font-size: 2.25rem; /* 32px */
+h1,
+.h1 {
+    font-size: 2.25rem;
+    /* 32px */
     color: var(--color-primary);
 }
 
-h2, .h2 {
-    font-size: 1.875rem; /* 30px */
+h2,
+.h2 {
+    font-size: 1.875rem;
+    /* 30px */
     color: var(--color-secondary);
 }
 
-h3, .h3 {
-    font-size: 1.5rem; /* 22px */
+h3,
+.h3 {
+    font-size: 1.5rem;
+    /* 22px */
     color: var(--color-accent);
 }
 
-p, .p {
-    font-size: 1rem; /* 12px */
+p,
+.p {
+    font-size: 1rem;
+    /* 12px */
     color: var(--color-text);
 }
 
@@ -57,6 +71,7 @@ p, .p {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -64,11 +79,16 @@ p, .p {
 
 #typed-container {
     display: inline-block;
-    height: 1.5em; /* Adjust this value to match your line height */
-    line-height: 1.5em; /* Ensure line height matches height */
-    white-space: nowrap; /* Prevent text wrapping */
-    overflow: hidden; /* Hide overflow to prevent resizing */
-    vertical-align: middle; /* Vertically align to middle */
+    height: 1.5em;
+    /* Adjust this value to match your line height */
+    line-height: 1.5em;
+    /* Ensure line height matches height */
+    white-space: nowrap;
+    /* Prevent text wrapping */
+    overflow: hidden;
+    /* Hide overflow to prevent resizing */
+    vertical-align: middle;
+    /* Vertically align to middle */
 }
 
 #typed-text {
@@ -206,7 +226,8 @@ p, .p {
 }
 
 .view-project-btn {
-    background-color: #007bff; /* Primary color */
+    background-color: #007bff;
+    /* Primary color */
     color: #fff;
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
@@ -219,18 +240,32 @@ p, .p {
 }
 
 .view-project-btn:hover {
-    background-color: #0056b3; /* Darker shade of primary color */
+    background-color: #0056b3;
+    /* Darker shade of primary color */
 }
 
 /* Hover state for button */
 .bg-primary-dark:hover {
-    background-color: #0056b3; /* Adjust this color to your preference */
+    background-color: #0056b3;
+    /* Adjust this color to your preference */
 }
 
 .blue-gray-darkest {
-    border-color: #005c9d; /* Dark Blue for border */
+    border-color: #005c9d;
+    /* Dark Blue for border */
 }
 
 .custom-shadow {
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1), 0 -2px 2px rgba(0, 0, 0, 0.1), 2px 0 2px rgba(0, 0, 0, 0.1), -2px 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 50;
+}
+
+html {
+    scroll-behavior: smooth;
 }
