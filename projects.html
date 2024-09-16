@@ -1,99 +1,168 @@
-
-    <section id="projects" class="mb-4" x-data="{ tab: 'software' }">
-        <h2 class="text-3xl text-center font-semibold text-secondary mb-4">Projects</h2>
-        <div class="tabs flex justify-center mb-4 bg-gray-800 p-4 rounded-lg">
-            <button @click="tab = 'software'" :class="{ 'font-bold bg-gray-700 text-white': tab === 'software', 'text-gray-300': tab !== 'software' }" class="px-4 py-2 mx-2 rounded hover:bg-gray-600">Software Projects</button>
-            <button @click="tab = 'automated'" :class="{ 'font-bold bg-gray-700 text-white': tab === 'automated', 'text-gray-300': tab !== 'automated' }" class="px-4 py-2 mx-2 rounded hover:bg-gray-600">Automation/Test Projects</button>
-        </div>
-        <div  data-aos="fade-up">
-            <!-- Automated Projects -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 fade-in" x-show="tab === 'automated'">
-                <!-- Project 1 -->
-                <div class="project-card p-6 rounded-lg shadow-lg mb-4 transform hover:scale-105 transition-transform duration-300">
-                    <!-- <img src="assets/projects/tasklull.png" alt="Project 1 Image" class="h-full object-cover rounded-lg custom-shadow"> -->
-                    <div class="mt-4 flex flex-col h-full">
-                        <h3 class="text-2xl font-semibold text-accent">LoggingRequests</h3>
-                        <p class="mt-2">LoggingRequests is a Python wrapper for the requests library that provides enhanced logging capabilities for HTTP requests and responses. This library allows you to log details such as request headers, body content, and responses, making it useful for debugging and monitoring HTTP traffic in your application.
-                        </p>
-                        <div class="flex-container">
-                            <div>
-                                <h4 class="text-xl font-semibold" style="margin-top: 0rem;">Skills Used</h4>
-                                <div class="skills-icons">
-                                    <!-- Skill Icons -->
-                                    <div class="w-10 h-10 border border-gray-200 rounded flex items-center justify-center shadow">
-                                        <img src="assets/icons/python.svg" alt="Python Icon" class="w-9 h-9">
-                                    </div>
-                                    <!-- Add more icons as needed -->
+<section id="projects" class="mb-4" x-data="{ tab: 'software' }">
+    <h2 class="text-3xl text-center font-semibold text-secondary mb-4">Projects</h2>
+    <div class="tabs flex justify-center mb-4 bg-gray-800 p-4 rounded-lg">
+        <button @click="tab = 'software'"
+            :class="{ 'font-bold bg-gray-700 text-white': tab === 'software', 'text-gray-300': tab !== 'software' }"
+            class="px-4 py-2 mx-2 rounded hover:bg-gray-600">Web Apps</button>
+        <button @click="tab = 'automated'"
+            :class="{ 'font-bold bg-gray-700 text-white': tab === 'automated', 'text-gray-300': tab !== 'automated' }"
+            class="px-4 py-2 mx-2 rounded hover:bg-gray-600">Test Automation</button>
+    </div>
+    <div data-aos="fade-up">
+        <!-- Automated Projects -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 fade-in" x-show="tab === 'automated'">
+            <!-- Project 1 -->
+            <div
+                class="project-card p-6 rounded-lg shadow-lg mb-4 transform hover:scale-105 transition-transform duration-300">
+                <!-- <img src="assets/projects/tasklull.png" alt="Project 1 Image" class="h-full object-cover rounded-lg custom-shadow"> -->
+                <div class="mt-4 flex flex-col h-full">
+                    <h3 class="text-2xl font-semibold text-accent">LoggingRequests</h3>
+                    <p class="mt-2">LoggingRequests is a Python wrapper for the requests library that provides enhanced
+                        logging capabilities for HTTP requests and responses. This library allows you to log details
+                        such as request headers, body content, and responses, making it useful for debugging and
+                        monitoring HTTP traffic in your application.
+                    </p>
+                    <div class="flex-container">
+                        <div>
+                            <h4 class="text-xl font-semibold" style="margin-top: 0rem;">Skills Used</h4>
+                            <div class="skills-icons">
+                                <!-- Skill Icons -->
+                                <div
+                                    class="w-10 h-10 border border-gray-200 rounded flex items-center justify-center shadow">
+                                    <img src="assets/icons/python.svg" alt="Python Icon" class="w-9 h-9">
                                 </div>
+                                <!-- Add more icons as needed -->
                             </div>
-                            <button type="button" class="view-project-btn" onclick="window.location.href='https://github.com/JimGalvan/logging-requests/'">View</button>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Software Projects -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 fade-in" x-show="tab === 'software'">
-                <!-- Project 2 -->
-                <div class="project-card p-6 rounded-lg shadow-lg mb-4 transform hover:scale-105 transition-transform duration-300">
-                    <img src="assets/projects/tasklull.png" alt="Project 1 Image" class="h-full object-cover rounded-lg custom-shadow">
-                    <div class="mt-4 flex flex-col h-full">
-                        <h3 class="text-2xl font-semibold text-accent">TaskLull</h3>
-                        <p class="mt-2">This project is a web-based Todo List application built with Django for the backend and JavaScript and CSS for the frontend. It includes user authentication and libraries like HTMX for enhanced interactivity.</p>
-                        <div class="flex-container">
-                            <div>
-                                <h4 class="text-xl font-semibold" style="margin-top: 0rem;">Skills Used</h4>
-                                <div class="skills-icons">
-                                    <!-- Skill Icons -->
-                                    <div class="w-10 h-10 border border-gray-200 rounded flex items-center justify-center shadow">
-                                        <img src="assets/icons/django.svg" alt="Django Icon" class="w-9 h-9">
-                                    </div>
-                                    <div class="w-10 h-10 border border-gray-200 rounded flex items-center justify-center shadow">
-                                        <img src="assets/icons/postgresql.svg" alt="AWS Icon" class="w-9 h-9">
-                                    </div>
-                                    <div class="w-10 h-10 border border-gray-200 rounded flex items-center justify-center shadow">
-                                        <img src="assets/icons/python.svg" alt="Python Icon" class="w-9 h-9">
-                                    </div>
-                                    <div class="w-10 h-10 border border-gray-200 rounded flex items-center justify-center shadow">
-                                        <img src="assets/icons/js.svg" alt="AWS Icon" class="w-9 h-9">
-                                    </div>
-                                    <!-- Add more icons as needed -->
-                                </div>
-                            </div>
-                            <button type="button" class="view-project-btn" onclick="window.location.href='https://www.tasklull.com/'">View</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card p-6 rounded-lg shadow-lg mb-4 transform hover:scale-105 transition-transform duration-300">
-                    <div class="h-full object-cover rounded-lg custom-shadow flex items-center justify-center bg-gray-800 text-white">
-                        Coming soon
-                    </div>
-                    <div class="mt-4 flex flex-col h-full">
-                        <h3 class="text-2xl font-semibold text-accent">NexMenu</h3>
-                        <p class="mt-2">This project is a web-based menu management application built with Django for the backend and React for the frontend. It allows users to create and manage their restaurant menus.</p>
-                        <div class="flex-container">
-                            <div>
-                                <h4 class="text-xl font-semibold" style="margin-top: 0rem;">Skills Used</h4>
-                                <div class="skills-icons">
-                                    <!-- Skill Icons -->
-                                    <div class="w-10 h-10 border border-gray-200 rounded flex items-center justify-center shadow">
-                                        <img src="assets/icons/django.svg" alt="Django Icon" class="w-9 h-9">
-                                    </div>
-                                    <div class="w-10 h-10 border border-gray-200 rounded flex items-center justify-center shadow">
-                                        <img src="assets/icons/postgresql.svg" alt="AWS Icon" class="w-9 h-9">
-                                    </div>
-                                    <div class="w-10 h-10 border border-gray-200 rounded flex items-center justify-center shadow">
-                                        <img src="assets/icons/python.svg" alt="Python Icon" class="w-9 h-9">
-                                    </div>
-                                    <div class="w-10 h-10 border border-gray-200 rounded flex items-center justify-center shadow">
-                                        <img src="assets/icons/react.svg" alt="AWS Icon" class="w-9 h-9">
-                                    </div>
-                                    <!-- Add more icons as needed -->
-                                </div>
-                            </div>
-                            <button type="button" class="view-project-btn">View</button>
-                        </div>
+                        <button type="button" class="view-project-btn"
+                            onclick="window.location.href='https://github.com/JimGalvan/logging-requests/'">View</button>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+        <!-- Software Projects -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 fade-in" x-show="tab === 'software'">
+            <!-- Project 1 -->
+            <div
+                class="project-card p-6 rounded-lg shadow-lg mb-4 transform hover:scale-105 transition-transform duration-300">
+                <img src="assets\images\SessionSpyreCard.png" alt="Project 1 Image"
+                    class="h-full object-cover rounded-lg custom-shadow">
+                <div class="mt-4 flex flex-col h-full">
+                    <h3 class="text-2xl font-semibold text-accent">SessionSpyre</h3>
+                    <p class="mt-2">
+                        SessionSpyre is a web-based user session recording and monitoring application designed to enhance
+                        user experience analysis and security. Built with Django for the backend and JavaScript for the
+                        frontend, it offers robust features for tracking user sessions, secure WebSocket communication,
+                        and efficient cookie management. The frontend utilizes
+                        HTMX for enhanced interactivity.
+                    </p>
+                    <div class="flex-container">
+                        <div>
+                            <h4 class="text-xl font-semibold" style="margin-top: 0rem;">Skills Used</h4>
+                            <div class="skills-icons">
+                                <!-- Skill Icons -->
+                                <div
+                                    class="w-10 h-10 border border-gray-200 rounded flex items-center justify-center shadow">
+                                    <img src="assets/icons/django.svg" alt="Django Icon" class="w-9 h-9">
+                                </div>
+                                <div
+                                    class="w-10 h-10 border border-gray-200 rounded flex items-center justify-center shadow">
+                                    <img src="assets/icons/postgresql.svg" alt="AWS Icon" class="w-9 h-9">
+                                </div>
+                                <div
+                                    class="w-10 h-10 border border-gray-200 rounded flex items-center justify-center shadow">
+                                    <img src="assets/icons/python.svg" alt="Python Icon" class="w-9 h-9">
+                                </div>
+                                <div
+                                    class="w-10 h-10 border border-gray-200 rounded flex items-center justify-center shadow">
+                                    <img src="assets/icons/js.svg" alt="AWS Icon" class="w-9 h-9">
+                                </div>
+                                <!-- Add more icons as needed -->
+                            </div>
+                        </div>
+                        <button type="button" class="view-project-btn"
+                            onclick="window.location.href='https://sessionspyre-production.up.railway.app/'">View</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div
+                class="project-card p-6 rounded-lg shadow-lg mb-4 transform hover:scale-105 transition-transform duration-300">
+                <img src="assets/projects/tasklull.png" alt="Project 1 Image"
+                    class="h-full object-cover rounded-lg custom-shadow">
+                <div class="mt-4 flex flex-col h-full">
+                    <h3 class="text-2xl font-semibold text-accent">TaskLull</h3>
+                    <p class="mt-2">This project is a web-based Todo List application built with Django for the backend
+                        and JavaScript and CSS for the frontend. It includes user authentication and libraries like HTMX
+                        for enhanced interactivity.</p>
+                    <div class="flex-container">
+                        <div>
+                            <h4 class="text-xl font-semibold" style="margin-top: 0rem;">Skills Used</h4>
+                            <div class="skills-icons">
+                                <!-- Skill Icons -->
+                                <div
+                                    class="w-10 h-10 border border-gray-200 rounded flex items-center justify-center shadow">
+                                    <img src="assets/icons/django.svg" alt="Django Icon" class="w-9 h-9">
+                                </div>
+                                <div
+                                    class="w-10 h-10 border border-gray-200 rounded flex items-center justify-center shadow">
+                                    <img src="assets/icons/postgresql.svg" alt="AWS Icon" class="w-9 h-9">
+                                </div>
+                                <div
+                                    class="w-10 h-10 border border-gray-200 rounded flex items-center justify-center shadow">
+                                    <img src="assets/icons/python.svg" alt="Python Icon" class="w-9 h-9">
+                                </div>
+                                <div
+                                    class="w-10 h-10 border border-gray-200 rounded flex items-center justify-center shadow">
+                                    <img src="assets/icons/js.svg" alt="AWS Icon" class="w-9 h-9">
+                                </div>
+                                <!-- Add more icons as needed -->
+                            </div>
+                        </div>
+                        <button type="button" class="view-project-btn"
+                            onclick="window.location.href='https://www.tasklull.com/'">View</button>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="project-card p-6 rounded-lg shadow-lg mb-4 transform hover:scale-105 transition-transform duration-300">
+                <div
+                    class="h-full object-cover rounded-lg custom-shadow flex items-center justify-center bg-gray-800 text-white">
+                    Coming soon
+                </div>
+                <div class="mt-4 flex flex-col h-full">
+                    <h3 class="text-2xl font-semibold text-accent">NexMenu</h3>
+                    <p class="mt-2">This project is a web-based menu management application built with Django for the
+                        backend and React for the frontend. It allows users to create and manage their restaurant menus.
+                    </p>
+                    <div class="flex-container">
+                        <div>
+                            <h4 class="text-xl font-semibold" style="margin-top: 0rem;">Skills Used</h4>
+                            <div class="skills-icons">
+                                <!-- Skill Icons -->
+                                <div
+                                    class="w-10 h-10 border border-gray-200 rounded flex items-center justify-center shadow">
+                                    <img src="assets/icons/django.svg" alt="Django Icon" class="w-9 h-9">
+                                </div>
+                                <div
+                                    class="w-10 h-10 border border-gray-200 rounded flex items-center justify-center shadow">
+                                    <img src="assets/icons/postgresql.svg" alt="AWS Icon" class="w-9 h-9">
+                                </div>
+                                <div
+                                    class="w-10 h-10 border border-gray-200 rounded flex items-center justify-center shadow">
+                                    <img src="assets/icons/python.svg" alt="Python Icon" class="w-9 h-9">
+                                </div>
+                                <div
+                                    class="w-10 h-10 border border-gray-200 rounded flex items-center justify-center shadow">
+                                    <img src="assets/icons/react.svg" alt="AWS Icon" class="w-9 h-9">
+                                </div>
+                                <!-- Add more icons as needed -->
+                            </div>
+                        </div>
+                        <button type="button" class="view-project-btn">View</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
