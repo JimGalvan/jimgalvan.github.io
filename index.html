@@ -37,17 +37,17 @@
     </script>
     <script>
         (async function () {
-          const script = document.createElement('script');
-          script.src = 'https://sessionspyre-clientjs.pages.dev/record.js';
-          script.async = true;
-          document.head.appendChild(script);
-          window.recordConfig = {
-            userId: '8826946f-8476-4a3e-973b-fbcf9e7f7bca',
-            siteId: '399a26c8-5a4d-4312-8777-3149bceb1413',
-            siteKey: '7e22303c0927918eb1f934ffec7b0e658a6183d4c23be6d66a530fb9737a6776',
-          };
+            const script = document.createElement('script');
+            script.src = 'https://sessionspyre-clientjs.pages.dev/record.js';
+            script.async = true;
+            document.head.appendChild(script);
+            window.recordConfig = {
+                userId: '8826946f-8476-4a3e-973b-fbcf9e7f7bca',
+                siteId: '399a26c8-5a4d-4312-8777-3149bceb1413',
+                siteKey: '7e22303c0927918eb1f934ffec7b0e658a6183d4c23be6d66a530fb9737a6776',
+            };
         })();
-      </script>
+    </script>
 </head>
 
 <body class="bg-gray-900 text-white font-ubuntu" x-data="{ darkMode: true }" :class="{ 'dark': darkMode }">
@@ -94,6 +94,7 @@
 
     <!-- Body -->
     <main class="container mx-auto px-4 sm:px-6 md:px-5 lg:px-5 py-10">
+        <!-- About Me -->
         <div class="bg-gray-900 p-6 shadow-lg rounded">
             <section id="about" class="mb-4 fade-up" x-data="{ expanded: false }" data-aos="fade-up">
                 <h2 class="text-3xl text-center font-semibold mb-4 text-secondary">About Me</h2>
@@ -109,6 +110,51 @@
                 <!-- <div x-show="expanded" class="mt-2">
                 <p>Additional details about background, hobbies, and other interests.</p>
             </div> -->
+            </section>
+
+            <!-- Skills -->
+            <section class="mb-8 w-full max-w-4xl mx-auto">
+                <h2 class="text-3xl text-center font-semibold mb-6 text-secondary">Technical Skills</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Software Development Skills -->
+                    <div class="bg-gray-800 p-4 rounded shadow-lg">
+                        <h3 class="text-xl text-center font-semibold mb-4 text-white">Software Development Skills</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full">Full-stack Development</span>
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full">OOP</span>
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full">Web Apps</span>
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full">RESTful APIs</span>
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full">JavaScript</span>
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full">Python</span>
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full">React</span>
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full">Django</span>
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full">Postgres</span>
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full">AWS</span>
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full">SQL</span>
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full">Git</span>
+
+                            <!-- Add more skills as needed -->
+                        </div>
+                    </div>
+                    <!-- Test Automation Skills -->
+                    <div class="bg-gray-800 p-4 rounded shadow-lg">
+                        <h3 class="text-xl text-center font-semibold mb-4 text-white">Test Automation Skills</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-green-600 text-white px-3 py-1 rounded-full">Test Frameworks</span>
+                            <span class="bg-green-600 text-white px-3 py-1 rounded-full">Appium</span>
+                            <span class="bg-green-600 text-white px-3 py-1 rounded-full">Selenium</span>
+                            <span class="bg-green-600 text-white px-3 py-1 rounded-full">Playwright</span>
+                            <span class="bg-green-600 text-white px-3 py-1 rounded-full">Jenkins</span>
+                            <span class="bg-green-600 text-white px-3 py-1 rounded-full">Docker</span>
+                            <span class="bg-green-600 text-white px-3 py-1 rounded-full">AWS</span>
+                            <span class="bg-green-600 text-white px-3 py-1 rounded-full">CI/CD</span>
+                            <span class="bg-green-600 text-white px-3 py-1 rounded-full">Java</span>
+                            <span class="bg-green-600 text-white px-3 py-1 rounded-full">Python</span>
+                            <span class="bg-green-600 text-white px-3 py-1 rounded-full">C#</span>
+                            <!-- Add more skills as needed -->
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <!-- Projects -->
