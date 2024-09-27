@@ -35,6 +35,19 @@
             });
         });
     </script>
+    <script>
+        (async function () {
+          const script = document.createElement('script');
+          script.src = 'https://sessionspyre-clientjs.pages.dev/record.js';
+          script.async = true;
+          document.head.appendChild(script);
+          window.recordConfig = {
+            userId: '8826946f-8476-4a3e-973b-fbcf9e7f7bca',
+            siteId: '399a26c8-5a4d-4312-8777-3149bceb1413',
+            siteKey: '7e22303c0927918eb1f934ffec7b0e658a6183d4c23be6d66a530fb9737a6776',
+          };
+        })();
+      </script>
 </head>
 
 <body class="bg-gray-900 text-white font-ubuntu" x-data="{ darkMode: true }" :class="{ 'dark': darkMode }">
