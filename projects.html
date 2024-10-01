@@ -1,4 +1,4 @@
-<section id="projects" class="mb-4" x-data="{ tab: 'software' }">
+<section id="projects" class="mb-4" x-data="{ tab: 'automated' }">
     <h2 class="text-3xl text-center font-semibold text-secondary mb-4">Projects</h2>
     <div class="tabs flex justify-center mb-4 bg-gray-800 p-4 rounded-lg">
         <button @click="tab = 'software'"
@@ -39,6 +39,65 @@
                     </div>
                 </div>
             </div>
+            <!-- Project 2 -->
+            <div
+                class="project-card p-6 rounded-lg shadow-lg mb-4 transform hover:scale-105 transition-transform duration-300">
+                <!-- <img src="assets/projects/test-automation-framework.png" alt="Project 2 Image" class="h-full object-cover rounded-lg custom-shadow"> -->
+                <div class="mt-4 flex flex-col h-full">
+                    <h3 class="text-2xl font-semibold text-accent">Pytest Automation Framework</h3>
+                    <p class="mt-2">This project highlights my expertise in Python, Selenium, Pytest, and the Page
+                        Object Model (POM) by developing a comprehensive automation framework. The test cases for adding
+                        and searching patients demonstrate the seamless integration of these technologies, showcasing my
+                        ability to create efficient and maintainable automated tests for web applications.</p>
+                    <div class="flex-container">
+                        <div>
+                            <h4 class="text-xl font-semibold" style="margin-top: 0rem;">Skills Used</h4>
+                            <div class="skills-icons">
+                                <!-- Skill Icons -->
+                                <div
+                                    class="w-10 h-10 border border-gray-200 rounded flex items-center justify-center shadow">
+                                    <img src="assets/icons/python.svg" alt="Python Icon" class="w-9 h-9">
+                                </div>
+                                <div
+                                    class="w-10 h-10 border border-gray-200 rounded flex items-center justify-center shadow">
+                                    <img src="assets\icons\selenium-svgrepo-com.svg" alt="Python Icon" class="w-9 h-9">
+                                </div>
+                            </div>
+                            <button type="button" class="view-project-btn"
+                                onclick="window.location.href='https://github.com/JimGalvan/OpenMRS-Web-Tests'">View</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="project-card p-6 rounded-lg shadow-lg mb-4 transform hover:scale-105 transition-transform duration-300">
+                <!-- <img src="assets/projects/cypress-e2e-tests.png" alt="Project Image" class="h-full object-cover rounded-lg custom-shadow"> -->
+                <div class="mt-4 flex flex-col h-full">
+                    <h3 class="text-2xl font-semibold text-accent">Cypress E2E Tests Project</h3>
+                    <p class="mt-2">This project demonstrates my proficiency in JavaScript and Cypress by developing
+                        end-to-end tests for a live website. The test case ensures that a guest user can add a
+                        reservation to the cart, showcasing my ability to create reliable and maintainable automated
+                        tests.</p>
+                    <div class="flex-container">
+                        <div>
+                            <h4 class="text-xl font-semibold" style="margin-top: 0rem;">Skills Used</h4>
+                            <div class="skills-icons">
+                                <!-- Skill Icons -->
+                                <div
+                                    class="w-10 h-10 border border-gray-200 rounded flex items-center justify-center shadow">
+                                    <img src="assets\icons\js.svg" alt="JavaScript Icon" class="w-9 h-9">
+                                </div>
+                                <div
+                                    class="w-10 h-10 border border-gray-200 rounded flex items-center justify-center shadow">
+                                    <img src="assets\icons\cypress-svgrepo-com.svg" alt="Cypress Icon" class="w-9 h-9">
+                                </div>
+                            </div>
+                            <button type="button" class="view-project-btn"
+                                onclick="window.location.href='https://github.com/JimGalvan/CypressE2ETestsProject'">View</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- Software Projects -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 fade-in" x-show="tab === 'software'">
@@ -50,7 +109,8 @@
                 <div class="mt-4 flex flex-col h-full">
                     <h3 class="text-2xl font-semibold text-accent">SessionSpyre</h3>
                     <p class="mt-2">
-                        SessionSpyre is a web-based user session recording and monitoring application designed to enhance
+                        SessionSpyre is a web-based user session recording and monitoring application designed to
+                        enhance
                         user experience analysis and security. Built with Django for the backend and JavaScript for the
                         frontend, it offers robust features for tracking user sessions, secure WebSocket communication,
                         and efficient cookie management. The frontend utilizes
@@ -124,6 +184,7 @@
                     </div>
                 </div>
             </div>
+
             <div
                 class="project-card p-6 rounded-lg shadow-lg mb-4 transform hover:scale-105 transition-transform duration-300">
                 <div
