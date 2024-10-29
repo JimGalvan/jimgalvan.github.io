@@ -43,11 +43,26 @@
                 script.async = true;
                 document.head.appendChild(script);
                 window.recordConfig = {
-                    userId: '8826946f-8476-4a3e-973b-fbcf9e7f7bca',
-                    siteId: '399a26c8-5a4d-4312-8777-3149bceb1413',
-                    siteKey: '7e22303c0927918eb1f934ffec7b0e658a6183d4c23be6d66a530fb9737a6776',
+                    userId: 'c0a616c3-b85c-4570-a81c-140c1afd45f2',
+                    siteId: 'a41e6458-f4e1-4dd8-ba50-d29f52283375',
+                    siteKey: '91725a55c613b79e394ecbbaeaa0f5c30b518c2de87c9a2a928bc774557af22b',
                 };
             }
+        })();
+    </script>
+    <script>
+        (async function () {
+            const script = document.createElement('script');
+            script.src = 'http://localhost:8000/static/js/record.js';
+            script.async = true;
+            document.head.appendChild(script);
+            window.recordConfig = {
+                userId: 'c0a616c3-b85c-4570-a81c-140c1afd45f2',
+                siteId: 'a41e6458-f4e1-4dd8-ba50-d29f52283375',
+                siteKey: '91725a55c613b79e394ecbbaeaa0f5c30b518c2de87c9a2a928bc774557af22b',
+                enable_logging: true,
+                log_level: "debug" // Set desired log level here
+            };
         })();
     </script>
 </head>
@@ -124,7 +139,9 @@
                 <h2 class="text-3xl text-center font-semibold mb-4 text-secondary">About Me</h2>
                 <div class="flex flex-wrap justify-center">
                     <div class="w-full md:w-2/3 pl-32">
-                        <p>Experienced Software Test Engineer with over 4 years of proficiency in test automation, Quality Assurance and software development. Certified as a Java programmer by the University of California San
+                        <p>Experienced Software Test Engineer with over 4 years of proficiency in test automation,
+                            Quality Assurance and software development. Certified as a Java programmer by the University
+                            of California San
                             Diego,
                             demonstrating a strong foundation in programming. Skilled in creating and maintaining
                             automated and
@@ -146,42 +163,55 @@
             <section id="skills" class="mb-8 w-full mx-auto">
                 <h2 class="text-3xl text-center font-semibold mb-6 text-secondary">Technical Skills</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <!-- Software Development Skills -->
+                    <!-- Programming Languages -->
                     <div class="bg-gray-800 p-4 rounded shadow-lg">
-                        <h3 class="text-xl text-center font-semibold mb-4 text-white">Software Development Skills</h3>
+                        <h3 class="text-xl text-center font-semibold mb-4 text-white">Programming Languages</h3>
                         <div class="flex flex-wrap gap-2">
-                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full">Full-stack Development</span>
-                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full">OOP</span>
-                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full">Web Apps</span>
-                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full">RESTful APIs</span>
-                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full">JavaScript</span>
                             <span class="bg-blue-600 text-white px-3 py-1 rounded-full">Python</span>
-                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full">React</span>
-                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full">Django</span>
-                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full">Postgres</span>
-                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full">AWS</span>
-                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full">SQL</span>
-                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full">Git</span>
-
-                            <!-- Add more skills as needed -->
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full">Java</span>
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full">C#</span>
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full">JavaScript</span>
                         </div>
                     </div>
-                    <!-- Test Automation Skills -->
+                    <!-- Backend Development -->
                     <div class="bg-gray-800 p-4 rounded shadow-lg">
-                        <h3 class="text-xl text-center font-semibold mb-4 text-white">Test Automation Skills</h3>
+                        <h3 class="text-xl text-center font-semibold mb-4 text-white">Backend Development</h3>
                         <div class="flex flex-wrap gap-2">
-                            <span class="bg-green-600 text-white px-3 py-1 rounded-full">Test Frameworks</span>
-                            <span class="bg-green-600 text-white px-3 py-1 rounded-full">Appium</span>
-                            <span class="bg-green-600 text-white px-3 py-1 rounded-full">Selenium</span>
-                            <span class="bg-green-600 text-white px-3 py-1 rounded-full">Playwright</span>
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full">Django</span>
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full">ASP.NET</span>
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full">REST APIs</span>
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full">WebSockets</span>
+                        </div>
+                    </div>
+                    <!-- Full-Stack Development -->
+                    <div class="bg-gray-800 p-4 rounded shadow-lg">
+                        <h3 class="text-xl text-center font-semibold mb-4 text-white">Full-Stack Development</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full">React</span>
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full">HTMX</span>
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full">Alpine.js</span>
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full">Postgres</span>
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full">AWS (S3, EC2)</span>
+                        </div>
+                    </div>
+                    <!-- Automation & CI/CD -->
+                    <div class="bg-gray-800 p-4 rounded shadow-lg">
+                        <h3 class="text-xl text-center font-semibold mb-4 text-white">Automation & CI/CD</h3>
+                        <div class="flex flex-wrap gap-2">
                             <span class="bg-green-600 text-white px-3 py-1 rounded-full">Jenkins</span>
                             <span class="bg-green-600 text-white px-3 py-1 rounded-full">Docker</span>
-                            <span class="bg-green-600 text-white px-3 py-1 rounded-full">AWS</span>
-                            <span class="bg-green-600 text-white px-3 py-1 rounded-full">CI/CD</span>
-                            <span class="bg-green-600 text-white px-3 py-1 rounded-full">Java</span>
-                            <span class="bg-green-600 text-white px-3 py-1 rounded-full">Python</span>
-                            <span class="bg-green-600 text-white px-3 py-1 rounded-full">C#</span>
-                            <!-- Add more skills as needed -->
+                            <span class="bg-green-600 text-white px-3 py-1 rounded-full">Playwright</span>
+                            <span class="bg-green-600 text-white px-3 py-1 rounded-full">Selenium</span>
+                        </div>
+                    </div>
+                    <!-- Software Design -->
+                    <div class="bg-gray-800 p-4 rounded shadow-lg">
+                        <h3 class="text-xl text-center font-semibold mb-4 text-white">Software Design</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full">Object-Oriented
+                                Programming</span>
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full">Design Patterns</span>
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full">Scalable Architecture</span>
                         </div>
                     </div>
                 </div>
