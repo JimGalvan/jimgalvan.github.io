@@ -37,32 +37,32 @@
     </script>
     <script>
         (async function () {
-            if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+            const script = document.createElement('script');
+            script.src = 'https://sessionspyre-clientjs.pages.dev/record.js';
+            script.async = true;
+            document.head.appendChild(script);
+            window.recordConfig = {
+                userId: '8826946f-8476-4a3e-973b-fbcf9e7f7bca',
+                siteId: '399a26c8-5a4d-4312-8777-3149bceb1413',
+                siteKey: '7e22303c0927918eb1f934ffec7b0e658a6183d4c23be6d66a530fb9737a6776',
+            };
+        })();
+    </script>
+    <script>
+        (async function () {
+            if (window.location.hostname == 'localhost' && window.location.hostname == '127.0.0.1') {
                 const script = document.createElement('script');
-                script.src = 'https://sessionspyre-clientjs.pages.dev/record.js';
+                script.src = 'http://localhost:8000/static/js/record.js';
                 script.async = true;
                 document.head.appendChild(script);
                 window.recordConfig = {
                     userId: 'c0a616c3-b85c-4570-a81c-140c1afd45f2',
                     siteId: 'a41e6458-f4e1-4dd8-ba50-d29f52283375',
                     siteKey: '91725a55c613b79e394ecbbaeaa0f5c30b518c2de87c9a2a928bc774557af22b',
+                    enable_logging: true,
+                    log_level: "debug" // Set desired log level here
                 };
             }
-        })();
-    </script>
-    <script>
-        (async function () {
-            const script = document.createElement('script');
-            script.src = 'http://localhost:8000/static/js/record.js';
-            script.async = true;
-            document.head.appendChild(script);
-            window.recordConfig = {
-                userId: 'c0a616c3-b85c-4570-a81c-140c1afd45f2',
-                siteId: 'a41e6458-f4e1-4dd8-ba50-d29f52283375',
-                siteKey: '91725a55c613b79e394ecbbaeaa0f5c30b518c2de87c9a2a928bc774557af22b',
-                enable_logging: true,
-                log_level: "debug" // Set desired log level here
-            };
         })();
     </script>
 </head>
