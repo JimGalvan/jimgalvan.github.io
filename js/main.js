@@ -16,13 +16,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     var typed = new Typed('#typed-text', {
-        strings: ["Software Engineer", "Test Automation Engineer", "QA Engineer"],
-        typeSpeed: 60,
-        backSpeed: 30,
-        loop: true,
-        showCursor: true,
-        cursorChar: '|',
-        contentType: 'html'
+        strings: [
+            'Software Test Engineer',
+            'Senior QA Automation Engineer',
+            'CI/CD Engineer',
+            'Test Automation Specialist',
+            'DevOps Engineer',
+            'Medical Device Testing Expert',
+            'Full-Stack Developer'
+        ],
+        typeSpeed: 100,
+        backSpeed: 50,
+        loop: true
     });
 
     AOS.init();
