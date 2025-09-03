@@ -95,22 +95,23 @@
     </script>
 </head>
 
-<body class="bg-gray-900 text-white font-ubuntu" x-data="{ darkMode: true }" :class="{ 'dark': darkMode }">
+<body class="bg-slate-900 text-slate-100 font-inter" x-data="{ darkMode: true }" :class="{ 'dark': darkMode }">
 
     <!-- Header -->
-    <header class="relative overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 shadow-2xl">
-        <div class="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10"></div>
-        <div class="relative flex flex-col lg:flex-row justify-between items-start lg:items-center p-6 lg:p-8 gap-6">
+    <header class="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-b border-slate-700/50">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-600/5 to-indigo-600/5"></div>
+        <div class="relative flex flex-col lg:flex-row justify-between items-start lg:items-center p-8 lg:p-12 gap-8 max-w-7xl mx-auto">
             <div class="flex-1 lg:w-2/3">
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-3">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-100 mb-4 tracking-tight">
                     Jim Galvan
                 </h1>
                 <div id="typed-container" class="mb-4">
                     <span id="typed-text" class="text-xl sm:text-2xl font-semibold text-gray-200"></span>
                 </div>
                 <div class="space-y-2">
-                    <p class="text-lg sm:text-xl text-gray-300 font-medium">Senior Software Test Engineer | QA Automation Engineer | SDET </p>
-                    <p class="text-sm sm:text-base text-gray-400">Nearly 6 Years Building Scalable Test Automation in Medical & Enterprise Environments</p>
+                    <p class="text-xl sm:text-2xl text-blue-400 font-semibold mb-2">Senior Software Test Engineer</p>
+                    <p class="text-base sm:text-lg text-slate-400 font-medium mb-4">QA Automation Engineer | SDET</p>
+                    <p class="text-sm sm:text-base text-slate-500">Nearly 6 Years Building Scalable Test Automation in Medical & Enterprise Environments</p>
                     <div class="flex flex-col sm:flex-row gap-2 sm:gap-6 mt-4">
                         <p class="text-sm text-gray-400 flex items-center">
                             <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -129,8 +130,8 @@
                 </div>
             </div>
             <div class="flex-shrink-0 w-full lg:w-1/3">
-                <div class="bg-gray-800/80 backdrop-blur-sm p-6 rounded-2xl shadow-xl border border-gray-700">
-                    <h3 class="text-lg font-semibold text-white mb-4">Connect With Me</h3>
+                <div class="enterprise-card p-6">
+                    <h3 class="text-lg font-semibold text-slate-100 mb-4">Connect With Me</h3>
                     <div class="space-y-3">
                         <a href="https://www.linkedin.com/in/jimalexsandergalvan/" target="_blank"
                             class="flex items-center p-3 bg-blue-600/20 hover:bg-blue-600/30 rounded-xl transition-all duration-300 group">
@@ -169,11 +170,11 @@
     </header>
 
     <!-- Menu -->
-    <nav id="navbar" class="bg-gray-900/95 backdrop-blur-md border-b border-gray-700/50 sticky top-0 w-full z-50 transition-all duration-300" x-data="{ open: false }" @click.away="open = false">
+    <nav id="navbar" class="bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50 sticky top-0 w-full z-50 transition-all duration-300" x-data="{ open: false }" @click.away="open = false">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
-                    <span class="text-white text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                    <span class="text-slate-100 text-xl font-semibold">
                         Portfolio
                     </span>
                 </div>
@@ -181,7 +182,7 @@
                 <!-- Mobile menu button -->
                 <div class="md:hidden">
                     <button @click="open = !open" 
-                            class="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 transition-colors duration-200"
+                            class="inline-flex items-center justify-center p-2 rounded-md text-slate-400 hover:text-slate-100 hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 transition-colors duration-200"
                             :aria-expanded="open" aria-label="Toggle menu">
                         <svg class="h-6 w-6" x-show="!open" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -207,12 +208,12 @@
 
         <!-- Mobile menu -->
         <div class="md:hidden" x-show="open" style="display: none;">
-            <div class="px-2 pt-2 pb-3 space-y-1 bg-gray-800 border-t border-gray-700">
-                <a href="#about" @click="open = false" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 transition-colors duration-200">About</a>
-                <a href="#skills" @click="open = false" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 transition-colors duration-200">Skills</a>
-                <a href="#achievements" @click="open = false" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 transition-colors duration-200">Achievements</a>
-                <a href="#projects" @click="open = false" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 transition-colors duration-200">Projects</a>
-                <a href="#contact-form" @click="open = false" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 transition-colors duration-200">Contact</a>
+            <div class="px-2 pt-2 pb-3 space-y-1 bg-slate-800/95 border-t border-slate-700/50 backdrop-blur-md">
+                <a href="#about" @click="open = false" class="block px-3 py-2 rounded-md text-base font-medium text-slate-400 hover:text-slate-100 hover:bg-slate-700/50 transition-colors duration-200">About</a>
+                <a href="#skills" @click="open = false" class="block px-3 py-2 rounded-md text-base font-medium text-slate-400 hover:text-slate-100 hover:bg-slate-700/50 transition-colors duration-200">Skills</a>
+                <a href="#achievements" @click="open = false" class="block px-3 py-2 rounded-md text-base font-medium text-slate-400 hover:text-slate-100 hover:bg-slate-700/50 transition-colors duration-200">Achievements</a>
+                <a href="#projects" @click="open = false" class="block px-3 py-2 rounded-md text-base font-medium text-slate-400 hover:text-slate-100 hover:bg-slate-700/50 transition-colors duration-200">Projects</a>
+                <a href="#contact-form" @click="open = false" class="block px-3 py-2 rounded-md text-base font-medium text-slate-400 hover:text-slate-100 hover:bg-slate-700/50 transition-colors duration-200">Contact</a>
             </div>
         </div>
     </nav>
@@ -222,9 +223,9 @@
     <!-- Body -->
     <main class="container mx-auto px-4 sm:px-6 md:px-5 lg:px-5 py-10">
         <!-- About Me -->
-        <div class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 shadow-2xl rounded-3xl border border-gray-700/50">
+        <div class="enterprise-card mb-8">
             <section id="about" class="p-8 lg:p-12" data-aos="fade-up">
-                <h2 class="text-4xl lg:text-5xl text-center font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                <h2 class="text-3xl lg:text-4xl text-center font-bold mb-12 text-slate-100 tracking-tight">
                     About Me
                 </h2>
                 <div class="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-12">
@@ -238,67 +239,67 @@
                     
                     <div class="flex-1 space-y-6">
                         <div class="prose prose-lg text-gray-300 leading-relaxed">
-                            <p class="text-lg lg:text-xl">
-                                <span class="font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                            <p class="text-lg lg:text-xl text-slate-300 leading-relaxed mb-6">
+                                <span class="font-semibold text-blue-400">
                                     Senior Software Test Engineer | QA Automation Engineer | SDET 
                                 </span> 
                                 with nearly 6 years of specialized experience designing and scaling automated testing frameworks for mission-critical software in medical and enterprise environments. Currently leading end-to-end testing efforts at Alphatec Spine, with proven expertise in Python, C#, and Java across Playwright, Selenium, Appium, and Pytest frameworks.
                             </p>
                             
-                            <p class="text-base lg:text-lg text-gray-400">
+                            <p class="text-base lg:text-lg text-slate-400 leading-relaxed">
                                 Proven leader in cross-functional Agile teams, driving CI/CD implementation using Jenkins, Docker, and AWS. Passionate about preventing production issues through early defect detection and continuous quality improvement. Strong background in test architecture, mobile automation, and test strategy for regulated healthcare products.
                             </p>
                         </div>
 
-                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8">
-                            <div class="bg-gradient-to-br from-blue-900/30 to-purple-900/30 p-6 rounded-2xl border border-blue-500/20 backdrop-blur-sm">
-                                <h4 class="text-xl font-bold text-blue-300 mb-4 flex items-center">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12">
+                            <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 backdrop-blur-sm">
+                                <h4 class="text-xl font-semibold text-blue-400 mb-6 flex items-center">
                                     <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
                                     </svg>
                                     Key Achievements
                                 </h4>
-                                <ul class="space-y-2 text-gray-300">
+                                <ul class="space-y-3 text-slate-300">
                                     <li class="flex items-start">
-                                        <span class="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                        <span class="w-1.5 h-1.5 bg-blue-400 rounded-full mt-2.5 mr-3 flex-shrink-0"></span>
                                         Led end-to-end testing for 3 major company projects
                                     </li>
                                     <li class="flex items-start">
-                                        <span class="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                        <span class="w-1.5 h-1.5 bg-blue-400 rounded-full mt-2.5 mr-3 flex-shrink-0"></span>
                                         Built and maintained 300+ automated test cases
                                     </li>
                                     <li class="flex items-start">
-                                        <span class="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                        <span class="w-1.5 h-1.5 bg-blue-400 rounded-full mt-2.5 mr-3 flex-shrink-0"></span>
                                         Rebuilt full CI/CD pipeline from scratch
                                     </li>
                                     <li class="flex items-start">
-                                        <span class="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                        <span class="w-1.5 h-1.5 bg-blue-400 rounded-full mt-2.5 mr-3 flex-shrink-0"></span>
                                         Resolved issues in 50+ existing outdated test cases across 4 major test suites from different products, enhancing test suite stability and ensuring accurate regression testing
                                     </li>
                                 </ul>
                             </div>
-                            <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 p-6 rounded-2xl border border-purple-500/20 backdrop-blur-sm">
-                                <h4 class="text-xl font-bold text-purple-300 mb-4 flex items-center">
+                            <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 backdrop-blur-sm">
+                                <h4 class="text-xl font-semibold text-indigo-400 mb-6 flex items-center">
                                     <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20">
                                         <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                     </svg>
                                     Industry Expertise
                                 </h4>
-                                <ul class="space-y-2 text-gray-300">
+                                <ul class="space-y-3 text-slate-300">
                                     <li class="flex items-start">
-                                        <span class="w-2 h-2 bg-purple-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                        <span class="w-1.5 h-1.5 bg-indigo-400 rounded-full mt-2.5 mr-3 flex-shrink-0"></span>
                                         Medical Device Testing (Dexcom, Alphatec Spine)
                                     </li>
                                     <li class="flex items-start">
-                                        <span class="w-2 h-2 bg-purple-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                        <span class="w-1.5 h-1.5 bg-indigo-400 rounded-full mt-2.5 mr-3 flex-shrink-0"></span>
                                         Enterprise Software (Ace Parking)
                                     </li>
                                     <li class="flex items-start">
-                                        <span class="w-2 h-2 bg-purple-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                        <span class="w-1.5 h-1.5 bg-indigo-400 rounded-full mt-2.5 mr-3 flex-shrink-0"></span>
                                         Regulated Product Testing
                                     </li>
                                     <li class="flex items-start">
-                                        <span class="w-2 h-2 bg-purple-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                        <span class="w-1.5 h-1.5 bg-indigo-400 rounded-full mt-2.5 mr-3 flex-shrink-0"></span>
                                         Cross-Platform Mobile Automation
                                     </li>
                                 </ul>
@@ -309,156 +310,156 @@
             </section>
 
             <!-- Skills -->
-            <section id="skills" class="mb-12 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 p-8 lg:p-12 rounded-3xl border border-gray-700/50 shadow-2xl">
-                <h2 class="text-4xl lg:text-5xl text-center font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <section id="skills" class="mb-12 enterprise-card p-8 lg:p-12">
+                <h2 class="text-3xl lg:text-4xl text-center font-bold mb-12 text-slate-100 tracking-tight">
                     Technical Skills
                 </h2>
                 <div class="skills-grid">
                     <!-- Test Automation Frameworks -->
-                    <div class="bg-gradient-to-br from-green-900/30 to-emerald-900/30 p-6 rounded-2xl border border-green-500/20 backdrop-blur-sm hover:border-green-400/40 transition-all duration-300 group">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-emerald-500 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <div class="bg-slate-800/40 p-6 rounded-xl border border-slate-700/50 hover:border-blue-500/30 transition-all duration-300 group">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mr-4 group-hover:bg-blue-500/30 transition-all duration-300">
+                                <svg class="w-6 h-6 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                                 </svg>
                             </div>
-                            <h3 class="text-xl font-bold text-green-300">Test Automation</h3>
+                            <h3 class="text-xl font-semibold text-slate-100">Test Automation</h3>
                         </div>
                         <div class="flex flex-wrap gap-2">
-                            <span class="skill-tag bg-green-500/20 text-green-300 border-green-500/30">Selenium WebDriver</span>
-                            <span class="skill-tag bg-green-500/20 text-green-300 border-green-500/30">Playwright</span>
-                            <span class="skill-tag bg-green-500/20 text-green-300 border-green-500/30">Cypress</span>
-                            <span class="skill-tag bg-green-500/20 text-green-300 border-green-500/30">Appium</span>
-                            <span class="skill-tag bg-green-500/20 text-green-300 border-green-500/30">Pytest</span>
-                            <span class="skill-tag bg-green-500/20 text-green-300 border-green-500/30">JUnit</span>
+                            <span class="skill-tag bg-blue-500/10 text-blue-300 border-blue-500/20">Selenium WebDriver</span>
+                            <span class="skill-tag bg-blue-500/10 text-blue-300 border-blue-500/20">Playwright</span>
+                            <span class="skill-tag bg-blue-500/10 text-blue-300 border-blue-500/20">Cypress</span>
+                            <span class="skill-tag bg-blue-500/10 text-blue-300 border-blue-500/20">Appium</span>
+                            <span class="skill-tag bg-blue-500/10 text-blue-300 border-blue-500/20">Pytest</span>
+                            <span class="skill-tag bg-blue-500/10 text-blue-300 border-blue-500/20">JUnit</span>
                         </div>
                     </div>
 
                     <!-- API Testing -->
-                    <div class="bg-gradient-to-br from-purple-900/30 to-violet-900/30 p-6 rounded-2xl border border-purple-500/20 backdrop-blur-sm hover:border-purple-400/40 transition-all duration-300 group">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-gradient-to-br from-purple-400 to-violet-500 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <div class="bg-slate-800/40 p-6 rounded-xl border border-slate-700/50 hover:border-indigo-500/30 transition-all duration-300 group">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-indigo-500/20 rounded-lg flex items-center justify-center mr-4 group-hover:bg-indigo-500/30 transition-all duration-300">
+                                <svg class="w-6 h-6 text-indigo-400" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
                                 </svg>
                             </div>
-                            <h3 class="text-xl font-bold text-purple-300">API Testing</h3>
+                            <h3 class="text-xl font-semibold text-slate-100">API Testing</h3>
                         </div>
                         <div class="flex flex-wrap gap-2">
-                            <span class="skill-tag bg-purple-500/20 text-purple-300 border-purple-500/30">REST API Testing</span>
-                            <span class="skill-tag bg-purple-500/20 text-purple-300 border-purple-500/30">SOAP Testing</span>
-                            <span class="skill-tag bg-purple-500/20 text-purple-300 border-purple-500/30">Postman</span>
-                            <span class="skill-tag bg-purple-500/20 text-purple-300 border-purple-500/30">Newman</span>
-                            <span class="skill-tag bg-purple-500/20 text-purple-300 border-purple-500/30">Microservices Testing</span>
-                            <span class="skill-tag bg-purple-500/20 text-purple-300 border-purple-500/30">JSON/XML Validation</span>
+                            <span class="skill-tag bg-indigo-500/10 text-indigo-300 border-indigo-500/20">REST API Testing</span>
+                            <span class="skill-tag bg-indigo-500/10 text-indigo-300 border-indigo-500/20">SOAP Testing</span>
+                            <span class="skill-tag bg-indigo-500/10 text-indigo-300 border-indigo-500/20">Postman</span>
+                            <span class="skill-tag bg-indigo-500/10 text-indigo-300 border-indigo-500/20">Newman</span>
+                            <span class="skill-tag bg-indigo-500/10 text-indigo-300 border-indigo-500/20">Microservices Testing</span>
+                            <span class="skill-tag bg-indigo-500/10 text-indigo-300 border-indigo-500/20">JSON/XML Validation</span>
                         </div>
                     </div>
 
                     <!-- DevOps & CI/CD -->
-                    <div class="bg-gradient-to-br from-red-900/30 to-rose-900/30 p-6 rounded-2xl border border-red-500/20 backdrop-blur-sm hover:border-red-400/40 transition-all duration-300 group">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-gradient-to-br from-red-400 to-rose-500 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <div class="bg-slate-800/40 p-6 rounded-xl border border-slate-700/50 hover:border-emerald-500/30 transition-all duration-300 group">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-emerald-500/20 rounded-lg flex items-center justify-center mr-4 group-hover:bg-emerald-500/30 transition-all duration-300">
+                                <svg class="w-6 h-6 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path>
                                 </svg>
                             </div>
-                            <h3 class="text-xl font-bold text-red-300">DevOps & CI/CD</h3>
+                            <h3 class="text-xl font-semibold text-slate-100">DevOps & CI/CD</h3>
                         </div>
                         <div class="flex flex-wrap gap-2">
-                            <span class="skill-tag bg-red-500/20 text-red-300 border-red-500/30">Jenkins</span>
-                            <span class="skill-tag bg-red-500/20 text-red-300 border-red-500/30">Docker</span>
-                            <span class="skill-tag bg-red-500/20 text-red-300 border-red-500/30">GitHub Actions</span>
-                            <span class="skill-tag bg-red-500/20 text-red-300 border-red-500/30">AWS (S3, EC2)</span>
-                            <span class="skill-tag bg-red-500/20 text-red-300 border-red-500/30">Pipeline Automation</span>
+                            <span class="skill-tag bg-emerald-500/10 text-emerald-300 border-emerald-500/20">Jenkins</span>
+                            <span class="skill-tag bg-emerald-500/10 text-emerald-300 border-emerald-500/20">Docker</span>
+                            <span class="skill-tag bg-emerald-500/10 text-emerald-300 border-emerald-500/20">GitHub Actions</span>
+                            <span class="skill-tag bg-emerald-500/10 text-emerald-300 border-emerald-500/20">AWS (S3, EC2)</span>
+                            <span class="skill-tag bg-emerald-500/10 text-emerald-300 border-emerald-500/20">Pipeline Automation</span>
                         </div>
                     </div>
 
                     <!-- Programming Languages -->
-                    <div class="bg-gradient-to-br from-blue-900/30 to-cyan-900/30 p-6 rounded-2xl border border-blue-500/20 backdrop-blur-sm hover:border-blue-400/40 transition-all duration-300 group">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <div class="bg-slate-800/40 p-6 rounded-xl border border-slate-700/50 hover:border-violet-500/30 transition-all duration-300 group">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-violet-500/20 rounded-lg flex items-center justify-center mr-4 group-hover:bg-violet-500/30 transition-all duration-300">
+                                <svg class="w-6 h-6 text-violet-400" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                                 </svg>
                             </div>
-                            <h3 class="text-xl font-bold text-blue-300">Programming Languages</h3>
+                            <h3 class="text-xl font-semibold text-slate-100">Programming Languages</h3>
                         </div>
                         <div class="flex flex-wrap gap-2">
-                            <span class="skill-tag bg-blue-500/20 text-blue-300 border-blue-500/30">Python</span>
-                            <span class="skill-tag bg-blue-500/20 text-blue-300 border-blue-500/30">Java</span>
-                            <span class="skill-tag bg-blue-500/20 text-blue-300 border-blue-500/30">C#</span>
-                            <span class="skill-tag bg-blue-500/20 text-blue-300 border-blue-500/30">JavaScript</span>
-                            <span class="skill-tag bg-blue-500/20 text-blue-300 border-blue-500/30">TypeScript</span>
+                            <span class="skill-tag bg-violet-500/10 text-violet-300 border-violet-500/20">Python</span>
+                            <span class="skill-tag bg-violet-500/10 text-violet-300 border-violet-500/20">Java</span>
+                            <span class="skill-tag bg-violet-500/10 text-violet-300 border-violet-500/20">C#</span>
+                            <span class="skill-tag bg-violet-500/10 text-violet-300 border-violet-500/20">JavaScript</span>
+                            <span class="skill-tag bg-violet-500/10 text-violet-300 border-violet-500/20">SQL</span>
                         </div>
                     </div>
 
                     <!-- Testing Methodologies -->
-                    <div class="bg-gradient-to-br from-yellow-900/30 to-orange-900/30 p-6 rounded-2xl border border-yellow-500/20 backdrop-blur-sm hover:border-yellow-400/40 transition-all duration-300 group">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <div class="bg-slate-800/40 p-6 rounded-xl border border-slate-700/50 hover:border-amber-500/30 transition-all duration-300 group">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-amber-500/20 rounded-lg flex items-center justify-center mr-4 group-hover:bg-amber-500/30 transition-all duration-300">
+                                <svg class="w-6 h-6 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
                                 </svg>
                             </div>
-                            <h3 class="text-xl font-bold text-yellow-300">Testing Methodologies</h3>
+                            <h3 class="text-xl font-semibold text-slate-100">Testing Methodologies</h3>
                         </div>
                         <div class="flex flex-wrap gap-2">
-                            <span class="skill-tag bg-yellow-500/20 text-yellow-300 border-yellow-500/30">BDD/Gherkin</span>
-                            <span class="skill-tag bg-yellow-500/20 text-yellow-300 border-yellow-500/30">TDD</span>
-                            <span class="skill-tag bg-yellow-500/20 text-yellow-300 border-yellow-500/30">Page Object Model</span>
-                            <span class="skill-tag bg-yellow-500/20 text-yellow-300 border-yellow-500/30">Data-Driven Testing</span>
-                            <span class="skill-tag bg-yellow-500/20 text-yellow-300 border-yellow-500/30">Regression Testing</span>
+                            <span class="skill-tag bg-amber-500/10 text-amber-300 border-amber-500/20">BDD/Gherkin</span>
+                            <span class="skill-tag bg-amber-500/10 text-amber-300 border-amber-500/20">TDD</span>
+                            <span class="skill-tag bg-amber-500/10 text-amber-300 border-amber-500/20">Page Object Model</span>
+                            <span class="skill-tag bg-amber-500/10 text-amber-300 border-amber-500/20">Data-Driven Testing</span>
+                            <span class="skill-tag bg-amber-500/10 text-amber-300 border-amber-500/20">Regression Testing</span>
                         </div>
                     </div>
 
                     <!-- QA Tools & Collaboration -->
-                    <div class="bg-gradient-to-br from-orange-900/30 to-red-900/30 p-6 rounded-2xl border border-orange-500/20 backdrop-blur-sm hover:border-orange-400/40 transition-all duration-300 group">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-gradient-to-br from-orange-400 to-red-500 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <div class="bg-slate-800/40 p-6 rounded-xl border border-slate-700/50 hover:border-cyan-500/30 transition-all duration-300 group">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mr-4 group-hover:bg-cyan-500/30 transition-all duration-300">
+                                <svg class="w-6 h-6 text-cyan-400" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"></path>
                                 </svg>
                             </div>
-                            <h3 class="text-xl font-bold text-orange-300">QA Tools & Collaboration</h3>
+                            <h3 class="text-xl font-semibold text-slate-100">QA Tools & Collaboration</h3>
                         </div>
                         <div class="flex flex-wrap gap-2">
-                            <span class="skill-tag bg-orange-500/20 text-orange-300 border-orange-500/30">Jira</span>
-                            <span class="skill-tag bg-orange-500/20 text-orange-300 border-orange-500/30">TestRail</span>
-                            <span class="skill-tag bg-orange-500/20 text-orange-300 border-orange-500/30">Confluence</span>
-                            <span class="skill-tag bg-orange-500/20 text-orange-300 border-orange-500/30">Charles Proxy</span>
-                            <span class="skill-tag bg-orange-500/20 text-orange-300 border-orange-500/30">Katalon Studio</span>
+                            <span class="skill-tag bg-cyan-500/10 text-cyan-300 border-cyan-500/20">Jira</span>
+                            <span class="skill-tag bg-cyan-500/10 text-cyan-300 border-cyan-500/20">TestRail</span>
+                            <span class="skill-tag bg-cyan-500/10 text-cyan-300 border-cyan-500/20">Confluence</span>
+                            <span class="skill-tag bg-cyan-500/10 text-cyan-300 border-cyan-500/20">Charles Proxy</span>
+                            <span class="skill-tag bg-cyan-500/10 text-cyan-300 border-cyan-500/20">Katalon Studio</span>
                         </div>
                     </div>
                 </div>
             </section>
 
             <!-- Professional Achievements & Metrics -->
-            <section id="achievements" class="mb-8 w-full mx-auto">
-                <h2 class="text-3xl text-center font-semibold mb-6 text-secondary">Professional Achievements</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+            <section id="achievements" class="mb-8 w-full mx-auto enterprise-card p-8">
+                <h2 class="text-3xl lg:text-4xl text-center font-bold mb-8 text-slate-100 tracking-tight">Professional Achievements</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
                     <!-- Metric Cards -->
-                    <div class="bg-gradient-to-br from-green-600 to-green-700 p-6 rounded-lg shadow-lg text-center">
-                        <div class="text-3xl font-bold text-white">3</div>
-                        <div class="text-green-100">Major Projects Led</div>
+                    <div class="bg-slate-800/30 p-6 rounded-xl border border-slate-700/50 text-center hover:border-blue-500/30 transition-all duration-300">
+                        <div class="text-3xl font-bold text-slate-100">3</div>
+                        <div class="text-slate-400 font-medium">Major Projects Led</div>
                     </div>
-                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 p-6 rounded-lg shadow-lg text-center">
-                        <div class="text-3xl font-bold text-white">300+</div>
-                        <div class="text-blue-100">Automated Test Cases</div>
+                    <div class="bg-slate-800/30 p-6 rounded-xl border border-slate-700/50 text-center hover:border-indigo-500/30 transition-all duration-300">
+                        <div class="text-3xl font-bold text-slate-100">300+</div>
+                        <div class="text-slate-400 font-medium">Automated Test Cases</div>
                     </div>
-                    <div class="bg-gradient-to-br from-purple-600 to-purple-700 p-6 rounded-lg shadow-lg text-center">
-                        <div class="text-3xl font-bold text-white">50+</div>
-                        <div class="text-purple-100">Test Issues Resolved</div>
+                    <div class="bg-slate-800/30 p-6 rounded-xl border border-slate-700/50 text-center hover:border-violet-500/30 transition-all duration-300">
+                        <div class="text-3xl font-bold text-slate-100">50+</div>
+                        <div class="text-slate-400 font-medium">Test Issues Resolved</div>
                     </div>
-                    <div class="bg-gradient-to-br from-red-600 to-red-700 p-6 rounded-lg shadow-lg text-center">
-                        <div class="text-3xl font-bold text-white">6</div>
-                        <div class="text-red-100">Years Testing Experience</div>
+                    <div class="bg-slate-800/30 p-6 rounded-xl border border-slate-700/50 text-center hover:border-emerald-500/30 transition-all duration-300">
+                        <div class="text-3xl font-bold text-slate-100">6</div>
+                        <div class="text-slate-400 font-medium">Years Testing Experience</div>
                     </div>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <!-- Certifications -->
-                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                        <h3 class="text-xl font-semibold mb-4 text-accent">Education & Certifications</h3>
+                    <div class="bg-slate-800/40 p-6 rounded-xl border border-slate-700/50">
+                        <h3 class="text-xl font-semibold mb-4 text-slate-100">Education & Certifications</h3>
                         <div class="space-y-3">
                             <div class="flex items-center">
                                 <div class="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
@@ -476,8 +477,8 @@
                     </div>
 
                     <!-- Testing Methodologies -->
-                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                        <h3 class="text-xl font-semibold mb-4 text-accent">Testing Approaches</h3>
+                    <div class="bg-slate-800/40 p-6 rounded-xl border border-slate-700/50">
+                        <h3 class="text-xl font-semibold mb-4 text-slate-100">Testing Approaches</h3>
                         <div class="space-y-3">
                             <div class="flex items-center">
                                 <div class="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
@@ -499,8 +500,8 @@
                     </div>
 
                     <!-- Tools & Technologies -->
-                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                        <h3 class="text-xl font-semibold mb-4 text-accent">Testing Tools Expertise</h3>
+                    <div class="bg-slate-800/40 p-6 rounded-xl border border-slate-700/50">
+                        <h3 class="text-xl font-semibold mb-4 text-slate-100">Testing Tools Expertise</h3>
                         <div class="space-y-3">
                             <div class="flex items-center">
                                 <div class="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
@@ -529,12 +530,12 @@
             </div>
 
             <!-- Contact Form -->
-            <section id="contact-form" class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 p-8 lg:p-12 rounded-3xl border border-gray-700/50 shadow-2xl max-w-2xl mx-auto"
+            <section id="contact-form" class="enterprise-card p-8 lg:p-12 max-w-2xl mx-auto"
                 x-data="{ name: '', email: '', message: '', errors: {}, successMessage: '' }">
-                <h2 class="text-4xl lg:text-5xl text-center font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                <h2 class="text-3xl lg:text-4xl text-center font-bold mb-8 text-slate-100 tracking-tight">
                     Get In Touch
                 </h2>
-                <p class="text-center text-gray-400 mb-8 text-lg">
+                <p class="text-center text-slate-400 mb-8 text-lg">
                     Let's discuss how I can help with your testing automation needs
                 </p>
                 
@@ -547,7 +548,7 @@
                             Name
                         </label>
                         <input name="user_name" type="text" x-model="name" required
-                            class="w-full p-4 bg-gray-800/50 backdrop-blur-sm border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                            class="w-full p-4 bg-slate-800/50 backdrop-blur-sm border border-slate-600 rounded-lg text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300"
                             placeholder="Your full name">
                         <span x-text="errors.name" class="text-red-400 text-sm mt-1 block"></span>
                     </div>
@@ -561,7 +562,7 @@
                             Email
                         </label>
                         <input name="user_email" type="email" x-model="email" required
-                            class="w-full p-4 bg-gray-800/50 backdrop-blur-sm border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
+                            class="w-full p-4 bg-slate-800/50 backdrop-blur-sm border border-slate-600 rounded-lg text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300"
                             placeholder="your.email@example.com">
                         <span x-text="errors.email" class="text-red-400 text-sm mt-1 block"></span>
                     </div>
@@ -574,14 +575,14 @@
                             Message
                         </label>
                         <textarea name="message" x-model="message" required rows="5"
-                            class="w-full p-4 bg-gray-800/50 backdrop-blur-sm border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-300 resize-none"
+                            class="w-full p-4 bg-slate-800/50 backdrop-blur-sm border border-slate-600 rounded-lg text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 resize-none"
                             placeholder="Tell me about your project or testing automation challenges..."></textarea>
                         <span x-text="errors.message" class="text-red-400 text-sm mt-1 block"></span>
                     </div>
                     
                     <div class="text-center">
                         <button type="submit" 
-                            class="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center justify-center mx-auto">
+                            class="enterprise-button flex items-center justify-center mx-auto">
                             <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                                 <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"></path>
                             </svg>
@@ -607,31 +608,31 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 border-t border-gray-700/50 py-12">
+    <footer class="bg-slate-900/95 border-t border-slate-700/50 py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8">
                     <div class="text-center md:text-left">
-                        <h3 class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                        <h3 class="text-2xl font-bold text-slate-100">
                             Jim Galvan
                         </h3>
-                        <p class="text-gray-400 mt-1">Senior Software Test Engineer</p>
+                        <p class="text-slate-400 mt-1 font-medium">Senior Software Test Engineer</p>
                     </div>
                     <div class="flex space-x-6">
                         <a href="https://www.linkedin.com/in/jimalexsandergalvan/" target="_blank"
-                            class="text-gray-400 hover:text-blue-400 transition-colors duration-300">
+                            class="text-slate-400 hover:text-blue-400 transition-colors duration-300">
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                             </svg>
                         </a>
                         <a href="https://github.com/JimGalvan" target="_blank"
-                            class="text-gray-400 hover:text-gray-300 transition-colors duration-300">
+                            class="text-slate-400 hover:text-slate-300 transition-colors duration-300">
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                             </svg>
                         </a>
                         <a href="https://leetcode.com/u/jimmy-galvan/" target="_blank"
-                            class="text-gray-400 hover:text-orange-400 transition-colors duration-300">
+                            class="text-slate-400 hover:text-amber-400 transition-colors duration-300">
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0z"/>
                             </svg>
@@ -639,10 +640,10 @@
                     </div>
                 </div>
                 <div class="text-center md:text-right mt-6 md:mt-0">
-                    <p class="text-gray-400 text-sm">
+                    <p class="text-slate-400 text-sm font-medium">
                         &copy; 2024 Jim Galvan. All rights reserved.
                     </p>
-                    <p class="text-gray-500 text-xs mt-1">
+                    <p class="text-slate-500 text-xs mt-1">
                         Built with modern web technologies
                     </p>
                 </div>
