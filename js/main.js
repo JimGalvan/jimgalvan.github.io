@@ -17,13 +17,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     var typed = new Typed('#typed-text', {
         strings: [
-            'Software Test Engineer',
+            'Senior Software Test Engineer',
             'Senior QA Automation Engineer',
-            'CI/CD Engineer',
             'Test Automation Specialist',
-            'DevOps Engineer',
             'Medical Device Testing Expert',
-            'Full-Stack Developer'
+            'SDET (Software Development Engineer in Test)'
         ],
         typeSpeed: 100,
         backSpeed: 50,
