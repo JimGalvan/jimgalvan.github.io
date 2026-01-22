@@ -6,6 +6,7 @@
     <title>Jim Galvan - Software Engineer | Computer Vision & Applied AI</title>
     <link rel="icon" type="image/x-icon" href="assets/icons/jim.svg">
     <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
@@ -154,45 +155,62 @@
         <div class="container">
             <h2 class="section-title">Projects</h2>
             <div class="projects-grid">
-                <div class="project-card">
-                    <h3>Computer Vision Quality Inspection System - Alphatec Spine</h3>
-                    <p>Developed and deployed deep learning-based computer vision models for surgical screw detection and quality inspection. Trained custom object detection models (YOLOv8) using PyTorch and OpenCV, engineering iterative training workflows with data augmentation to achieve robust performance in production.</p>
-                    <div class="project-tech">
-                        <span class="tag">PyTorch</span>
-                        <span class="tag">Deep Learning</span>
-                        <span class="tag">OpenCV</span>
-                        <span class="tag">CV Models</span>
-                        <span class="tag">Object Detection</span>
-                        <span class="tag">Python</span>
+                <div class="project-card project-card-featured">
+                    <div class="project-img-wrapper">
+                        <a href="assets/images/projects/ok_screw.png" class="glightbox project-img-link">
+                            <img src="assets/images/projects/ok_screw.png" alt="Surgical Screw Detection" class="project-img">
+                        </a>
+                        <span class="img-caption">Representative inspection image. Visuals anonymized and simplified.</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Computer Vision Quality Inspection System - Alphatec Spine</h3>
+                        <p>Developed and deployed deep learning-based computer vision models for surgical screw detection and quality inspection. Trained custom object detection models (YOLOv8) using PyTorch and OpenCV, engineering iterative training workflows with data augmentation to achieve robust performance in production.</p>
+                        <div class="project-tech">
+                            <span class="tag">PyTorch</span>
+                            <span class="tag">Deep Learning</span>
+                            <span class="tag">OpenCV</span>
+                            <span class="tag">CV Models</span>
+                            <span class="tag">Object Detection</span>
+                            <span class="tag">Python</span>
+                        </div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <img src="assets/images/detection.png" alt="FoodPhotoEnhancer Detection" class="project-img">
-                    <h3>FoodPhotoEnhancer - AI Food Photography Enhancement</h3>
-                    <p><em>(Private Repository - App in Development)</em> Developed an AI-powered food photography enhancement system that automatically detects and enhances the main food subject in images. Engineered a multi-factor weighted scoring algorithm combining normalized mask area, proximity to image center (exponential distance decay), and depth prominence to identify the primary dish. Implemented adaptive iterative refinement with exponential threshold decay to expand subject boundaries and capture garnishes. Integrated Grounding DINO for text-prompted detection and SAM for pixel-precise segmentation with LRU caching for optimized inference.</p>
-                    <div class="project-tech">
-                        <span class="tag">PyTorch</span>
-                        <span class="tag">Deep Learning</span>
-                        <span class="tag">OpenCV</span>
-                        <span class="tag">Computer Vision</span>
-                        <span class="tag">SAM</span>
-                        <span class="tag">DINO</span>
-                        <span class="tag">Django</span>
-                        <span class="tag">Docker</span>
-                        <span class="tag">Python</span>
+                <div class="project-card project-card-featured">
+                    <a href="assets/images/detection.png" class="glightbox project-img-link">
+                        <img src="assets/images/detection.png" alt="FoodPhotoEnhancer Detection" class="project-img">
+                    </a>
+                    <div class="project-content">
+                        <h3>FoodPhotoEnhancer - AI Food Photography Enhancement</h3>
+                        <p><em>(Private Repository - App in Development)</em> Developed an AI-powered food photography enhancement system that automatically detects and enhances the main food subject in images. Engineered a multi-factor weighted scoring algorithm combining normalized mask area, proximity to image center (exponential distance decay), and depth prominence to identify the primary dish. Implemented adaptive iterative refinement with exponential threshold decay to expand subject boundaries and capture garnishes. Integrated Grounding DINO for text-prompted detection and SAM for pixel-precise segmentation with LRU caching for optimized inference.</p>
+                        <div class="project-tech">
+                            <span class="tag">PyTorch</span>
+                            <span class="tag">Deep Learning</span>
+                            <span class="tag">OpenCV</span>
+                            <span class="tag">Computer Vision</span>
+                            <span class="tag">SAM</span>
+                            <span class="tag">DINO</span>
+                            <span class="tag">Django</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">Python</span>
+                        </div>
+                        <a href="https://foodphotoenhancerweb-production.up.railway.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary project-btn">View Live Demo</a>
                     </div>
-                    <a href="https://foodphotoenhancerweb-production.up.railway.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary project-btn">View Live Demo</a>
                 </div>
-                <div class="project-card">
-                    <h3>NexMenus - Multi-tenant SaaS Platform</h3>
-                    <p>Founded and developed NexMenus, a multi-tenant SaaS platform for restaurant menu management. Architected a full-stack application using Django, PostgreSQL, and AWS S3. Integrated Stripe for subscription management and implemented GDPR compliance workflows.</p>
-                    <div class="project-tech">
-                        <span class="tag">Django</span>
-                        <span class="tag">PostgreSQL</span>
-                        <span class="tag">AWS S3</span>
-                        <span class="tag">Stripe</span>
-                        <span class="tag">Python</span>
-                        <span class="tag">GDPR</span>
+                <div class="project-card project-card-featured">
+                    <a href="assets/images/projects/menu.png" class="glightbox project-img-link">
+                        <img src="assets/images/projects/menu.png" alt="NexMenus Platform" class="project-img">
+                    </a>
+                    <div class="project-content">
+                        <h3>NexMenus - Multi-tenant SaaS Platform</h3>
+                        <p>Founded and developed NexMenus, a multi-tenant SaaS platform for restaurant menu management. Architected a full-stack application using Django, PostgreSQL, and AWS S3. Integrated Stripe for subscription management and implemented GDPR compliance workflows.</p>
+                        <div class="project-tech">
+                            <span class="tag">Django</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">AWS S3</span>
+                            <span class="tag">Stripe</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">GDPR</span>
+                        </div>
                     </div>
                 </div>
                 <div class="project-card">
@@ -390,6 +408,10 @@
 
         // Initialize EmailJS
         emailjs.init('OrQ-AWyuUO-A99v7V');
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script>
+        const lightbox = GLightbox({ selector: '.glightbox' });
     </script>
 </body>
 </html>
