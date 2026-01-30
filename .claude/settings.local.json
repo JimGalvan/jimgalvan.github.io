@@ -9,7 +9,9 @@
       "Bash(git -C \"C:\\\\git\\\\jimgalvan.github.io\" commit -m \"$\\(cat <<''EOF''\nRemove hero image from landing page\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
       "Bash(git -C \"C:\\\\git\\\\jimgalvan.github.io\" add index.html assets/style.css assets/images/detection.png)",
       "Bash(git -C \"C:\\\\git\\\\jimgalvan.github.io\" commit -m \"$\\(cat <<''EOF''\nAdd FoodPhotoEnhancer project and reduce UI spacing\n\n- Add new FoodPhotoEnhancer AI project with image and live demo button\n- Reduce padding and margins throughout for tighter layout\n- Add project-img and project-btn CSS styles\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
-      "Bash(dir \"C:\\\\git\\\\jimgalvan.github.io\\\\assets\\\\images\\\\projects\")"
+      "Bash(dir \"C:\\\\git\\\\jimgalvan.github.io\\\\assets\\\\images\\\\projects\")",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nUpdate FoodPhotoEnhancer description with edge deployment info\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")"
     ],
     "deny": [],
     "ask": []
