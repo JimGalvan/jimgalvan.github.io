@@ -34,7 +34,6 @@
             </button>
             <div class="nav-menu" id="nav-menu">
                 <a href="#about" class="nav-link">About</a>
-                <a href="#skills" class="nav-link">Skills</a>
                 <a href="#projects" class="nav-link">Projects</a>
                 <a href="#experience" class="nav-link">Experience</a>
                 <a href="#contact" class="nav-link">Contact</a>
@@ -65,82 +64,12 @@
         <div class="container">
             <h2 class="section-title">About Me</h2>
             <div class="about-text">
-                <p>Software Engineer with strong experience designing, building, and operating cloud-native backend systems using C# and .NET, with additional proficiency in Java, JavaScript, and Python. Proven track record delivering production microservices, event-driven architectures, and data-intensive APIs in cloud environments.</p>
-                <p>Experienced in owning backend services end to end — from system design and implementation to deployment, observability, and production troubleshooting. Currently at Alphatec Spine building production .NET microservices with Azure Service Bus and Clean Architecture, and Founder of NexMenus, a multi-tenant SaaS platform for restaurant management.</p>
-                <p>Certified in Java programming with a solid foundation in object-oriented design and data structures, and comfortable working across distributed systems while making pragmatic architectural decisions in fast-moving teams.</p>
+                <p>Software Engineer focused on backend systems, distributed architectures, and cloud-native applications using C# and .NET. Currently working at Alphatec Spine, where I design and operate production microservices, REST APIs, and event-driven workflows for medical cloud platforms with a strong focus on reliability, scalability, and observability. My work includes improving distributed system resilience, troubleshooting complex production issues, optimizing backend performance, and contributing to applied AI and computer vision initiatives for automation and quality analysis. I have a strong background in debugging, root-cause analysis, and designing reliable workflows across distributed services using asynchronous messaging and modern cloud infrastructure.</p>
+                <p>Outside of work, I build SaaS products and full-stack applications to stay sharp and explore what's next. I created NexMenus, a restaurant-focused SaaS platform, and have shipped projects spanning real-time systems, session replay, cloud infrastructure, AI integrations, and distributed workflows. I gravitate toward hard backend and infrastructure problems — scalability, concurrency, performance, developer tooling — and I'm consistently studying distributed systems, AI engineering, Rust, game physics, and systems programming.</p>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h3>Backend & APIs</h3>
-                    <div class="skill-tags">
-                        <span class="tag">.NET</span>
-                        <span class="tag">ASP.NET Core</span>
-                        <span class="tag">REST</span>
-                        <span class="tag">Django</span>
-                        <span class="tag">Clean Architecture</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <h3>Architecture</h3>
-                    <div class="skill-tags">
-                        <span class="tag">Microservices</span>
-                        <span class="tag">Event-Driven Architecture</span>
-                        <span class="tag">Service-Oriented Architecture</span>
-                        <span class="tag">Object-Oriented Programming</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <h3>Languages</h3>
-                    <div class="skill-tags">
-                        <span class="tag">C#</span>
-                        <span class="tag">Java</span>
-                        <span class="tag">Python</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">SQL</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <h3>Cloud & Messaging</h3>
-                    <div class="skill-tags">
-                        <span class="tag">Azure</span>
-                        <span class="tag">Azure Service Bus</span>
-                        <span class="tag">AWS</span>
-                        <span class="tag">PostgreSQL</span>
-                        <span class="tag">Redis</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <h3>DevOps & Infrastructure</h3>
-                    <div class="skill-tags">
-                        <span class="tag">Azure Pipelines</span>
-                        <span class="tag">Docker</span>
-                        <span class="tag">Kubernetes</span>
-                        <span class="tag">Linux</span>
-                        <span class="tag">Jenkins</span>
-                        <span class="tag">CI/CD Pipelines</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <h3>Testing & Quality</h3>
-                    <div class="skill-tags">
-                        <span class="tag">JUnit</span>
-                        <span class="tag">Playwright</span>
-                        <span class="tag">Selenium</span>
-                        <span class="tag">Appium</span>
-                        <span class="tag">Postman</span>
-                        <span class="tag">Agile/Scrum</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Projects Section -->
     <section id="projects" class="projects">
@@ -152,8 +81,13 @@
                         <img src="assets/images/sumo.png" alt="Multiplayer 3D Car Driving Game" class="project-img" loading="lazy">
                     </a>
                     <div class="project-content">
-                        <h3>Multiplayer 3D Car Driving Game</h3>
-                        <p>Built a multiplayer 3D car driving game where players drive around a shared world complete with ramps and obstacles. Cars feature realistic steering, acceleration, and collision physics powered by the Rapier physics engine. Each player's position is synced in real time to all other players via WebSockets through a Rust backend server that manages sessions and keeps everyone's world in sync.</p>
+                        <h3>Sumo Car - Multiplayer 3D Driving Game</h3>
+                        <p>Built a real-time multiplayer 3D driving game using TypeScript, Three.js, and Rapier on the frontend with a Rust and Tokio backend. The main frontend challenge was keeping the codebase manageable as complexity grew. I structured every game object as a class that owns both its physics body and its 3D mesh together. That single decision kept the code clean, readable, and easy to extend.</p>
+                        <p>The Rust backend acts as the central hub. Each client sends its car position, rotation, and tire state over WebSockets. The backend distributes that state to every other connected player and handles the details that need a single source of truth: assigning each player a color, setting their starting position, and storing their name.</p>
+                        <div class="read-more-content" hidden>
+                            <p>On the physics side, acceleration applies an impulse scaled by the car's mass and delta time. Steering applies a torque force rather than rotating the car directly, which gives the handling a natural feel. Tokio handles all backend concurrency using safe async data structures so multiple simultaneous connections never step on each other.</p>
+                        </div>
+                        <button class="read-more-btn" onclick="toggleReadMore(this)">Read more</button>
                         <div class="project-tech">
                             <span class="tag">TypeScript</span>
                             <span class="tag">Three.js</span>
@@ -175,7 +109,12 @@
                     </div>
                     <div class="project-content">
                         <h3>Computer Vision Quality Inspection System - Alphatec Spine</h3>
-                        <p>Developed and deployed deep learning-based computer vision models for surgical screw detection and quality inspection. Trained custom object detection models (YOLOv8) using PyTorch and OpenCV, engineering iterative training workflows with data augmentation to achieve robust performance in production.</p>
+                        <p>Developed and deployed deep learning-based computer vision models for surgical screw detection and quality inspection using YOLOv8 and PyTorch. The core challenge was making the system reliable across real-world variability: inconsistent lighting conditions, varying camera angles, and differences in photo quality between controlled and field environments.</p>
+                        <p>To address this, I built OpenCV preprocessing pipelines to enhance screw features through edge sharpening, contrast normalization, and noise reduction before inference, making the model's job significantly easier regardless of capture conditions.</p>
+                        <div class="read-more-content" hidden>
+                            <p>I also engineered iterative retraining workflows with targeted data augmentation to accommodate new scenarios and failure cases as they surfaced in production, continuously improving robustness without degrading performance on previously learned cases.</p>
+                        </div>
+                        <button class="read-more-btn" onclick="toggleReadMore(this)">Read more</button>
                         <div class="project-tech">
                             <span class="tag">PyTorch</span>
                             <span class="tag">Deep Learning</span>
@@ -192,7 +131,12 @@
                     </a>
                     <div class="project-content">
                         <h3>FoodPhotoEnhancer - AI Food Photography Enhancement</h3>
-                        <p><em>(Private Repository - App in Development)</em> Built an AI-powered app that automatically identifies and enhances the main dish in food photos. Engineered an intelligent detection pipeline using visual context and a weighted scoring algorithm to reliably identify subjects without custom-trained models. Integrated Grounding DINO and SAM models with performance optimizations. Optimized for edge deployment on Raspberry Pi, enabling real-time enhancement without cloud dependency.</p>
+                        <p><em>(Private Repository - App in Development)</em> Built an app that takes a food photo and enhances the main dish automatically. The hard part: food photos rarely have one clean subject. You get a plate surrounded by sides, sauces, toppings, utensils, and other dishes all competing for attention.</p>
+                        <p>The pipeline identifies the main subject without any custom training data. It uses Grounding DINO and SAM to detect and reconstruct the subject from its parts, treating a dish as a composite of the plate, toppings, sides, and surrounding elements rather than a single object. A weighted scoring algorithm then picks the right subject even when multiple dishes are present or the shot is taken from an unusual angle.</p>
+                        <div class="read-more-content" hidden>
+                            <p>The second challenge was deployment. Getting inference to run correctly on a server required setting up the right GPU drivers, making sure PyTorch was actually using the GPU, and tuning the stack so the pipeline ran fast enough to be usable. The app also runs on a Raspberry Pi for edge use cases where no server is available.</p>
+                        </div>
+                        <button class="read-more-btn" onclick="toggleReadMore(this)">Read more</button>
                         <div class="project-tech">
                             <span class="tag">PyTorch</span>
                             <span class="tag">Deep Learning</span>
@@ -214,7 +158,13 @@
                     </a>
                     <div class="project-content">
                         <h3>NexMenus - Multi-tenant SaaS Platform</h3>
-                        <p>Founded and developed NexMenus, a multi-tenant SaaS platform for restaurant menu management. Architected a full-stack application using Django, PostgreSQL, and AWS S3. Integrated Stripe for subscription management and implemented GDPR compliance workflows.</p>
+                        <p>Built NexMenus, a SaaS platform where restaurants manage their menus, websites, and online orders. The first real challenge was Stripe. Integrating payments for the first time meant understanding the webhook lifecycle, handling callbacks safely, and designing a subscription that gives users real value at a fair price. Getting that wrong early would have broken the business model.</p>
+                        <p>Performance required its own solution. Restaurants upload photos, and loading full-size images on every page visit kills the experience. I built a utility that generates multiple thumbnail sizes and resolutions on upload, then the frontend pulls the right size lazily as the user scrolls.</p>
+                        <div class="read-more-content" hidden>
+                            <p>Spanish localization needed region detection and a proper translation layer applied consistently across the app. Email verification took longer than expected: setting up the email provider infrastructure, getting deliverability right, and testing the full verification flow across edge cases all added up. The onboarding page, where users land after purchasing, also required careful Stripe integration to read the right session state and show the correct next steps.</p>
+                            <p>Once real users started using it, Sentry became essential. Production errors you never see in development show up fast when actual people use your app, and having visibility into what breaks lets me fix things before they affect too many users.</p>
+                        </div>
+                        <button class="read-more-btn" onclick="toggleReadMore(this)">Read more</button>
                         <div class="project-tech">
                             <span class="tag">Django</span>
                             <span class="tag">PostgreSQL</span>
@@ -260,13 +210,14 @@
                 <div class="experience-item">
                     <div class="experience-date">Nov 2023 - Present</div>
                     <div class="experience-content">
-                        <h3>Software Engineer (Backend / Platform)</h3>
+                        <h3>Software Engineer</h3>
                         <h4>Alphatec Spine - Carlsbad, California</h4>
                         <ul>
-                            <li>Design and build production .NET microservices using ASP.NET Core, PostgreSQL, and Azure Service Bus, following Clean Architecture principles and working closely with other engineering teams to ensure reliable service-to-service integration</li>
-                            <li>Implement event-driven workflows with asynchronous messaging to decouple services, improve scalability and fault tolerance, and coordinate integration changes across multiple teams</li>
-                            <li>Own backend services end to end, independently troubleshooting, debugging, and resolving production issues through log analysis, root-cause investigation, and system-level understanding</li>
-                            <li>Implemented and deployed an end-to-end healthcare data integration pipeline where hospital systems streamed patient data and medical imaging into a Dockerized Mirth Connect engine running on Ubuntu Linux instances in Azure</li>
+                            <li>Design and develop production .NET microservices and RESTful APIs for a medical cloud platform using ASP.NET Core, PostgreSQL, Redis, and Azure services while following Clean Architecture principles and coordinating contracts across frontend, embedded, and mobile teams</li>
+                            <li>Build and maintain event-driven workflows using Azure Service Bus to decouple distributed services, improve scalability and fault tolerance, and support reliable cross-team integrations</li>
+                            <li>Redesigned a distributed workflow spanning three backend services to eliminate race conditions and improve reliability by implementing idempotent operations, resilient error handling, and explicit state transition management, significantly reducing production incidents and inconsistent system states</li>
+                            <li>Troubleshoot and resolve production incidents across distributed systems through structured log analysis in Datadog, root-cause investigation with Application Insights, and deep system-level analysis of asynchronous workflows, service interactions, and failure propagation</li>
+                            <li>Improve backend observability and service performance through distributed tracing, structured logging, diagnostics instrumentation, and bottleneck analysis using tools such as .NET Aspire across microservice environments</li>
                         </ul>
                     </div>
                 </div>
@@ -286,24 +237,24 @@
                 <div class="experience-item">
                     <div class="experience-date">Aug 2021 - Nov 2023</div>
                     <div class="experience-content">
-                        <h3>Software Engineer in Test & DevOps</h3>
+                        <h3>Software Engineer – DevOps & Automation</h3>
                         <h4>Ace Parking - San Diego, California</h4>
                         <ul>
-                            <li>Rebuilt and maintained CI/CD pipelines using Jenkins, Docker, and Ubuntu Linux instances in AWS, improving deployment reliability, stability, and automation coverage across multiple products</li>
-                            <li>Developed API automation using JavaScript and Postman, validating backend endpoints and service integrations</li>
-                            <li>Built and maintained UI automation frameworks using Selenium (Java/JUnit/Katalon) to support regression testing at scale</li>
+                            <li>Rebuilt and maintained CI/CD pipelines using Jenkins, Groovy pipeline scripting, Docker, and Ubuntu Linux environments in AWS after inheriting unstable deployment infrastructure with no dedicated DevOps support, improving deployment reliability, automation coverage, and build stability across multiple products</li>
+                            <li>Developed API automation and integration testing workflows using JavaScript and Postman to validate backend endpoints and service integrations</li>
+                            <li>Built and maintained scalable browser automation frameworks using Selenium, Java, JUnit, and Katalon to support large-scale regression testing and reduce manual validation efforts across web applications</li>
                         </ul>
                     </div>
                 </div>
                 <div class="experience-item">
                     <div class="experience-date">Jan 2020 - Aug 2021</div>
                     <div class="experience-content">
-                        <h3>SW Test Development Engineer I</h3>
+                        <h3>Software Test Development Engineer I</h3>
                         <h4>Dexcom - San Diego, California</h4>
                         <ul>
-                            <li>Built automated test frameworks for Android and iOS using Java, JUnit, and Appium, supporting continuous delivery of mobile healthcare applications</li>
-                            <li>Tested BLE and Wi-Fi-based glucose monitoring systems, validating end-to-end data flows, device connectivity, and system reliability</li>
-                            <li>Collaborated closely with backend (cloud), mobile (iOS and Android), and product teams in an Agile environment to deliver high-impact, regulated healthcare features</li>
+                            <li>Performed functional and integration testing for BLE and Wi-Fi-enabled glucose monitoring devices and companion mobile applications within a regulated medical device environment</li>
+                            <li>Developed and maintained mobile automation frameworks for iOS and Android applications using Java, JUnit, and Appium to improve regression coverage and reduce manual testing effort</li>
+                            <li>Collaborated closely with software engineers, QA teams, and project managers in Agile/Scrum environments to support feature validation, release readiness, and cross-functional delivery alignment</li>
                         </ul>
                     </div>
                 </div>
@@ -311,38 +262,6 @@
         </div>
     </section>
 
-    <!-- Education & Certifications Section -->
-    <section id="education" class="skills">
-        <div class="container">
-            <h2 class="section-title">Education & Certifications</h2>
-            <div class="education-grid">
-                <div class="skill-card">
-                    <h3>Education</h3>
-                    <div class="education-item">
-                        <h4>Java Programming</h4>
-                        <p>UC San Diego (2019-2020)</p>
-                        <div class="skill-tags">
-                            <span class="tag">Object-Oriented Programming (OOP)</span>
-                            <span class="tag">Data Structures & Algorithms</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <h3>Certifications</h3>
-                    <div class="education-item">
-                        <h4>JavaScript Algorithms and Data Structures</h4>
-                        <p>FreeCodeCamp</p>
-                        <p class="cert-description">Comprehensive course covering ES6+, data structures, algorithms, recursion, regex, and functional programming.</p>
-                    </div>
-                    <div class="education-item">
-                        <h4>AWS Cloud Technical Essentials</h4>
-                        <p>Coursera and AWS</p>
-                        <p class="cert-description">26-hour course covering AWS services like EC2, Lambda, ECS, S3, RDS, DynamoDB, and IAM, along with security fundamentals.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
@@ -390,6 +309,13 @@
     </footer>
 
     <script>
+        function toggleReadMore(btn) {
+            const content = btn.previousElementSibling;
+            const expanded = !content.hidden;
+            content.hidden = expanded;
+            btn.textContent = expanded ? 'Read more' : 'Read less';
+        }
+
         // Simple navigation toggle
         document.getElementById('nav-toggle').addEventListener('click', function() {
             document.getElementById('nav-menu').classList.toggle('active');
